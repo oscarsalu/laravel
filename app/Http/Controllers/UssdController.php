@@ -106,7 +106,7 @@ class UssdController extends Controller
         //JSON encode
         $recipientStringFormat = json_encode($recipients);
         //Create an instance of our awesome gateway class and pass your credentials
-        $gateway = new AfricasTalkingGateway("saluoscar", "49b2072164745a882f212e1d19c961f1a1050f5b5c4cf17ccb092f015cd9df5e");    
+        $gateway = new AfricasTalkingGateway($username, $apikey);    
         // Thats it, hit send and we'll take care of the rest. Any errors will be captured in the Exception class as shown below
         try {
             $results = $gateway->sendAirtime($recipientStringFormat);

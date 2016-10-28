@@ -37,10 +37,12 @@ class UssdController extends Controller
 
 
         else {
+            
             if ($text == '1') {
-                $main_menu = "We will be shortly sending you an inspiring message:";
 
-                $response = $main_menu;
+                $menu = "We will be shortly sending you an inspiring message:";
+
+                $response = $menu;
                 $this->getSms();
 
                 $this->sendResponse($response, 2);
@@ -48,18 +50,18 @@ class UssdController extends Controller
 
         else {
             if ($text == '2') {
-                $main_menu = "Please wait while we place your call.\n";
+                $menu = "Please wait while we place your call.\n";
 
-                $response = $main_menu;
+                $response = $menu;
                 $this->getCall();
 
                 $this->sendResponse($response, 2);
             }
         else {
             if ($text == '3') {
-                $main_menu = "Today it seems you are lucky.\n";
+                $menu = "Today it seems you are lucky.\n";
 
-                $response = $main_menu;
+                $response = $menu;
                 $this->getAirtime();
 
                 $this->sendResponse($response, 2);
